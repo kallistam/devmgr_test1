@@ -1,0 +1,250 @@
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('自填日志', '3', '1', '/module/log', 'C', '0', 'module:log:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '自填日志菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('自填日志查询', @parentId, '1',  '#',  'F', '0', 'module:log:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('自填日志新增', @parentId, '2',  '#',  'F', '0', 'module:log:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('自填日志修改', @parentId, '3',  '#',  'F', '0', 'module:log:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('自填日志删除', @parentId, '4',  '#',  'F', '0', 'module:log:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('自填日志保存', @parentId, '5',  '#',  'F', '0', 'module:log:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:log:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('权限', '3', '1', '/module/perm', 'C', '0', 'module:perm:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '权限菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('权限查询', @parentId, '1',  '#',  'F', '0', 'module:perm:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('权限新增', @parentId, '2',  '#',  'F', '0', 'module:perm:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('权限修改', @parentId, '3',  '#',  'F', '0', 'module:perm:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('权限删除', @parentId, '4',  '#',  'F', '0', 'module:perm:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('权限保存', @parentId, '5',  '#',  'F', '0', 'module:perm:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:perm:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('总项目->子项目->组内分工', '3', '1', '/module/project', 'C', '0', 'module:project:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '总项目->子项目->组内分工菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('总项目->子项目->组内分工查询', @parentId, '1',  '#',  'F', '0', 'module:project:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('总项目->子项目->组内分工新增', @parentId, '2',  '#',  'F', '0', 'module:project:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('总项目->子项目->组内分工修改', @parentId, '3',  '#',  'F', '0', 'module:project:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('总项目->子项目->组内分工删除', @parentId, '4',  '#',  'F', '0', 'module:project:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('总项目->子项目->组内分工保存', @parentId, '5',  '#',  'F', '0', 'module:project:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:project:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA回答', '3', '1', '/module/qaAnswer', 'C', '0', 'module:qaAnswer:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', 'QA回答菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA回答查询', @parentId, '1',  '#',  'F', '0', 'module:qaAnswer:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA回答新增', @parentId, '2',  '#',  'F', '0', 'module:qaAnswer:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA回答修改', @parentId, '3',  '#',  'F', '0', 'module:qaAnswer:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA回答删除', @parentId, '4',  '#',  'F', '0', 'module:qaAnswer:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA回答保存', @parentId, '5',  '#',  'F', '0', 'module:qaAnswer:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:qaAnswer:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA', '3', '1', '/module/qa', 'C', '0', 'module:qa:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', 'QA菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA查询', @parentId, '1',  '#',  'F', '0', 'module:qa:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA新增', @parentId, '2',  '#',  'F', '0', 'module:qa:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA修改', @parentId, '3',  '#',  'F', '0', 'module:qa:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA删除', @parentId, '4',  '#',  'F', '0', 'module:qa:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('QA保存', @parentId, '5',  '#',  'F', '0', 'module:qa:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:qa:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则', '3', '1', '/module/role', 'C', '0', 'module:role:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '规则菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则查询', @parentId, '1',  '#',  'F', '0', 'module:role:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则新增', @parentId, '2',  '#',  'F', '0', 'module:role:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则修改', @parentId, '3',  '#',  'F', '0', 'module:role:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则删除', @parentId, '4',  '#',  'F', '0', 'module:role:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则保存', @parentId, '5',  '#',  'F', '0', 'module:role:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:role:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则-权限', '3', '1', '/module/rolePerm', 'C', '0', 'module:rolePerm:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '规则-权限菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则-权限查询', @parentId, '1',  '#',  'F', '0', 'module:rolePerm:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则-权限新增', @parentId, '2',  '#',  'F', '0', 'module:rolePerm:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则-权限修改', @parentId, '3',  '#',  'F', '0', 'module:rolePerm:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则-权限删除', @parentId, '4',  '#',  'F', '0', 'module:rolePerm:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('规则-权限保存', @parentId, '5',  '#',  'F', '0', 'module:rolePerm:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:rolePerm:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户对应项目', '3', '1', '/module/team', 'C', '0', 'module:team:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '用户对应项目菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户对应项目查询', @parentId, '1',  '#',  'F', '0', 'module:team:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户对应项目新增', @parentId, '2',  '#',  'F', '0', 'module:team:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户对应项目修改', @parentId, '3',  '#',  'F', '0', 'module:team:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户对应项目删除', @parentId, '4',  '#',  'F', '0', 'module:team:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户对应项目保存', @parentId, '5',  '#',  'F', '0', 'module:team:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:team:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户', '3', '1', '/module/user', 'C', '0', 'module:user:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '用户菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户查询', @parentId, '1',  '#',  'F', '0', 'module:user:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户新增', @parentId, '2',  '#',  'F', '0', 'module:user:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户修改', @parentId, '3',  '#',  'F', '0', 'module:user:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户删除', @parentId, '4',  '#',  'F', '0', 'module:user:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户保存', @parentId, '5',  '#',  'F', '0', 'module:user:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:user:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+-- 菜单 SQL
+insert into sys_menu (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户权限', '3', '1', '/module/userRole', 'C', '0', 'module:userRole:view', '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '用户权限菜单');
+
+-- 按钮父菜单ID
+SELECT @parentId := LAST_INSERT_ID();
+
+-- 按钮 SQL
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户权限查询', @parentId, '1',  '#',  'F', '0', 'module:userRole:list',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户权限新增', @parentId, '2',  '#',  'F', '0', 'module:userRole:add',          '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户权限修改', @parentId, '3',  '#',  'F', '0', 'module:userRole:edit',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户权限删除', @parentId, '4',  '#',  'F', '0', 'module:userRole:remove',       '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('用户权限保存', @parentId, '5',  '#',  'F', '0', 'module:userRole:save',         '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
+
+insert into sys_menu  (menu_name, parent_id, order_num, url,menu_type, visible, perms, icon, create_by, create_time, update_by, update_time, remark)
+values('批量删除', @parentId, '6',  '#',  'F', '0', 'module:userRole:batchRemove',  '#', 'admin', '2018-03-01', 'ry', '2018-03-01', '');
